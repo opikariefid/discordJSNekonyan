@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
-var module = require('./api');
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
