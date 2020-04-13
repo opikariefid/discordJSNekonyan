@@ -1,4 +1,9 @@
 'use strict';
+
+module.exports = Sentences;
+
+function Sentences() {
+
 var auth = require('../auth.json');
 // Import the discord.js module
 const Discord = require('discord.js');
@@ -275,3 +280,5 @@ client.on('message', msg => {
 });
 
 client.login(auth.token);
+
+}
