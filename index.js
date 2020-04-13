@@ -10,10 +10,6 @@ app.use(express.urlencoded({ extended: false }));
 app.listen(port, () => {
   console.log(`Server is booming on port 5000
 Visit http://localhost:5000`);
-const greeting = require('./api/greeting');
-const presence = require('./api/presence');
-const sentences = require('./api/sentences');
-const index = require('./api/index');
 });
 
 // Import Dependencies
