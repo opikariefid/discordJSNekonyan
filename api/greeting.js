@@ -1,4 +1,3 @@
-export function greeting() {
 'use strict';
 var auth = require('../auth.json');
 
@@ -15,7 +14,7 @@ client.on('ready', () => {
 // Fungsi Baca JSON
 const fs = require('fs');
 function configJSON(filename,guildID){
-    let dir = '../config/'+guildID+'/'+filename+'.json';
+    let dir = './config/'+guildID+'/'+filename+'.json';
     let config = JSON.parse(fs.readFileSync(dir));
     return config;
 }
@@ -53,4 +52,3 @@ client.on('guildMemberRemove', member => {
 });
 
 client.login(auth.token);
-}

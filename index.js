@@ -2,14 +2,7 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
-import { greeting } from './api/greeting.js';
-greeting();
-import { presence } from './api/presence.js';
-presence();
-import { sentences } from './api/sentences.js';
-sentences();
-import { help } from './api/index.js';
-help();
+var module = require('./api');
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
