@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
+const greeting = require('./api/greeting');
+const presence = require('./api/presence');
+const sentences = require('./api/sentences');
+const index = require('./api/index');
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
@@ -21,10 +25,6 @@ Visit http://localhost:5000`);
 // Home route
 app.get("/", (req, res) => {
     res.send("Discord Bot NekonyAn is online!");
-    require('./api/greeting');
-    require('./api/presence');
-    require('./api/sentences');
-    require('./api/index');
   });
 
   // Mock APIs
