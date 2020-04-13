@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
-const sentences = require("./api/sentences");
+var respon = require('.api/sentences.js');
+respon.data.Sentences();
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));

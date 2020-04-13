@@ -1,8 +1,7 @@
 'use strict';
+var methods = {};
 
-module.exports = Sentences;
-
-function Sentences() {
+methods.Sentences=function(){
 
 var auth = require('../auth.json');
 // Import the discord.js module
@@ -282,3 +281,4 @@ client.on('message', msg => {
 client.login(auth.token);
 
 }
+exports.data=methods;
