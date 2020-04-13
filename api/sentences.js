@@ -1,7 +1,7 @@
 'use strict';
 var methods = {};
 
-methods.Sentences=function(){
+methods.sentences=function(){
 
 var auth = require('../auth.json');
 // Import the discord.js module

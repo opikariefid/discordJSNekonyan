@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
-var respon = require('.api/sentences.js');
-respon.data.Sentences();
+var respon = require('./api/sentences.js');
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
@@ -12,6 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 app.listen(port, () => {
   console.log(`Server is booming on port 5000
 Visit http://localhost:5000`);
+respon.data.sentences();
 });
 
 // Import Dependencies
