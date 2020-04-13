@@ -21,10 +21,10 @@ Visit http://localhost:5000`);
 // Home route
 app.get("/", (req, res) => {
     res.send("Discord Bot NekonyAn is online!");
-    const greeting = require('./api/greeting');
-    const presence = require('./api/presence');
-    const sentences = require('./api/sentences');
-    const index = require('./api/index');
+    require('./api/greeting');
+    require('./api/presence');
+    require('./api/sentences');
+    require('./api/index');
   });
 
   // Mock APIs
