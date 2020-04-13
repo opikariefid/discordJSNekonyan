@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 
 const port = 5000;
-const greeting = require('./api/greeting');
-const presence = require('./api/presence');
-const sentences = require('./api/sentences');
-const index = require('./api/index');
+var greeting = require('./api/greeting.js');
+var presence = require('./api/presence.js');
+var sentences = require('./api/sentences.js');
+var index = require('./api/index.js');
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
