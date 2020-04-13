@@ -9,14 +9,14 @@ const prefix = "!";
 // Fungsi Baca JSON
 const fs = require('fs');
 function configJSON(filename,guildID){
-    let dir = './config/'+guildID+'/'+filename+'.json';
+    let dir = '../config/'+guildID+'/'+filename+'.json';
     let config = JSON.parse(fs.readFileSync(dir));
     return config;
 }
 
 // Fungsi Simpan report.json
 async function saveReportJSON(config, guildID){
-    var dirConfig = "./config/" + guildID + "/report.json";
+    var dirConfig = "../config/" + guildID + "/report.json";
     var report_conf = config;
     var reportID = report_conf.reportID;
     var reportStat = report_conf.reportStat;

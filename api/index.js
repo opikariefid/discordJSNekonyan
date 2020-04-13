@@ -1,6 +1,6 @@
 'use strict';
 var auth = require('../auth.json');
-var opikarief = require('./assets/opikarief/opikarief.json');
+var opikarief = require('../assets/opikarief/opikarief.json');
 var kataKasar = opikarief.badword.split(" ");
 var confirmStorage = [];
 var cmdStorage = [];
@@ -52,7 +52,7 @@ async function kirimPesanKeChannelSama(msg,data){
 
 const fs = require('fs');
 function configJSON(filename,guildID){
-    let dir = './config/'+guildID+'/'+filename+'.json';
+    let dir = '../config/'+guildID+'/'+filename+'.json';
     let config = JSON.parse(fs.readFileSync(dir));
     return config;
 }
@@ -130,7 +130,7 @@ function bacaReport(msg,authorID){
 
 // Fungsi Simpan server.json
 async function saveServerJSON(config, guildID){
-    var dirConfig = "./config/" + guildID + "/server.json";
+    var dirConfig = "../config/" + guildID + "/server.json";
     var server_conf = config;
     var greeting = server_conf.greeting;
     var noticeChannelID = server_conf.noticeChannelID;
@@ -172,7 +172,7 @@ async function cekFile(g){
     var guiidName = g.name;
     var ownerID = g.ownerID;
     const fs = require('fs');
-    var guildDir = "./config/" + guildID;
+    var guildDir = "../config/" + guildID;
     var fileList = ['server.json','report.json'];
     var contentList = [
         '{'+
@@ -299,7 +299,7 @@ client.on('message', msg => {
         if(cmd == prefix+'config'){
             if(args[1] == 'notice' && args[2] == 'custom' && totalcmd == 4){
                 var guildID = msg.guild.id;
-                var server = require('./config/'+guildID+'/server.json')
+                var server = require('../config/'+guildID+'/server.json')
                 var verAdmin = false;
                 var listAdmin = server.adminUserID
                 var i;
