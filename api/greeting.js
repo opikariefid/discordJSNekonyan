@@ -1,3 +1,4 @@
+export function greeting() {
 'use strict';
 var auth = require('../auth.json');
 
@@ -52,3 +53,4 @@ client.on('guildMemberRemove', member => {
 });
 
 client.login(auth.token);
+}

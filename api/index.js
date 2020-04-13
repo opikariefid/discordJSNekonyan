@@ -1,3 +1,4 @@
+export function help() {
 'use strict';
 var auth = require('../auth.json');
 var opikarief = require('../assets/opikarief/opikarief.json');
@@ -636,3 +637,4 @@ client.on('message', msg => {
 });
 
 client.login(auth.token);
+}

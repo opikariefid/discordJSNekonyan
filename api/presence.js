@@ -1,3 +1,4 @@
+export function presence() {
 'use strict';
 var auth = require('../auth.json');
 
@@ -20,3 +21,4 @@ client.on('ready', () => {
 });
 
 client.login(auth.token);
+}
